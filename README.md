@@ -1,36 +1,24 @@
-sh-4.4$ ps -ef | grep -v "\[" | grep -E "chrome|firefox|brave|edge|electron|python|java|citrix|xfce|terminal|sh"
-root        1260       1  0 Oct29 ?        00:00:04 /usr/sbin/sshd -D -oCiphers=aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes128-ctr,aes128-cbc -oMACs=hmac-sha2-256-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha1,umac-128@openssh.com,hmac-sha2-512 -oGSSAPIKexAlgorithms=gss-curve25519-sha256-,gss-nistp256-sha256-,gss-group14-sha256-,gss-group16-sha512-,gss-gex-sha1-,gss-group14-sha1- -oKexAlgorithms=curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1 -oHostKeyAlgorithms=ecdsa-sha2-nistp256,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,ssh-rsa,ssh-rsa-cert-v01@openssh.com -oPubkeyAcceptedKeyTypes=ecdsa-sha2-nistp256,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,ssh-rsa,ssh-rsa-cert-v01@openssh.com -oCASignatureAlgorithms=ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh-ed25519,rsa-sha2-256,rsa-sha2-512,ssh-rsa
-root        2003       1  0 Oct29 ?        00:00:28 /bin/ksh /usr/local/libexec/osconf/gdm-watchdog
-sms         2130    2005  0 Oct29 tty2     00:00:00 /usr/libexec/gdm-x-session --register-session --run-script startxfce4
-sms         2157    2130  0 Oct29 tty2     00:00:00 /bin/sh /etc/xdg/xfce4/xinitrc vt
-sms         2493    2157  0 Oct29 ?        00:00:01 /usr/bin/ssh-agent /bin/sh -c exec -l /bin/sh -c "startxfce4"
-sms         2545    2157  0 Oct29 tty2     00:00:38 xfce4-session
-sms         2555    2550  0 Oct29 ?        00:00:01 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
-sms         2562    2108  0 Oct29 ?        00:00:00 /usr/lib64/xfce4/xfconf/xfconfd
-cpos        2586    2419  0 Oct29 tty3     00:00:00 -bash
-sms         2610       1  0 Oct29 ?        00:00:09 /usr/bin/gpg-agent --sh --daemon
-sms         2678    2545  0 Oct29 tty2     00:01:56 xfce4-panel
-sms         2695    2545  0 Oct29 tty2     00:00:15 /bin/ksh /usr/local/bin/sound-volume-reset -l -d 900
-sms         2742    2545  0 Oct29 tty2     00:00:00 /bin/ksh /opt/znet/bin/concentrator.sh
-sms         2743    2742  0 Oct29 tty2     00:00:37 /bin/ksh /opt/znet/bin/concentrator.sh
-sms         2767    2545  0 Oct29 tty2     00:02:49 xfce4-power-manager
-sms         2777    2545  0 Oct29 tty2     00:00:35 /usr/libexec/xfce-polkit
-sms         2780    2108  0 Oct29 ?        00:00:00 /usr/lib64/xfce4/notifyd/xfce4-notifyd
-sms         2808    2678  0 Oct29 tty2     00:00:00 /usr/lib64/xfce4/panel/wrapper-2.0 /usr/lib64/xfce4/panel/plugins/libactions.so 12 12582923 actions Action Buttons Log out, lock or other system actions
-sms        33978       1  0 Oct29 ?        00:00:00 /usr/lib64/xfce4/notifyd/xfce4-notifyd
-sms        33982       1  0 Oct29 ?        00:00:00 /usr/lib64/xfce4/xfconf/xfconfd
-root     2332394       1  0 06:00 ?        00:00:00 /bin/bash /opt/zBus/bin/zBus.sh
-root     2332736 2332733  0 06:01 ?        00:00:00 sh
-root     2332737 2332736  0 06:01 ?        00:00:00 /bin/bash
-root     2332738 2332737  0 06:01 ?        00:00:00 sudo -u sms env DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1201/bus /opt/znet/bin/znet.sh
-sms      2332787 2332764  0 06:01 ?        00:00:00 /usr/lib64/qt5/libexec/QtWebEngineProcess --type=renderer --disable-speech-api --enable-threaded-compositing --enable-features=AllowContentInitiatedDataUrlNavigations,NetworkServiceInProcess,TracingServiceInProcess --disable-features=BackgroundFetch,ConsolidatedMovementXY,DnsOverHttpsUpgrade,FontSrcLocalMatching,InstalledApp,MojoVideoCapture,PictureInPicture,SmsReceiver,UseSkiaRenderer,WebPayments,WebUSB --lang=en --webengine-schemes=znet:;qrc:sLV --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=3 --shared-files
-sms      2332801 2332764  0 06:01 ?        00:00:13 /usr/lib64/qt5/libexec/QtWebEngineProcess --type=renderer --disable-speech-api --enable-threaded-compositing --enable-features=AllowContentInitiatedDataUrlNavigations,NetworkServiceInProcess,TracingServiceInProcess --disable-features=BackgroundFetch,ConsolidatedMovementXY,DnsOverHttpsUpgrade,FontSrcLocalMatching,InstalledApp,MojoVideoCapture,PictureInPicture,SmsReceiver,UseSkiaRenderer,WebPayments,WebUSB --lang=en --webengine-schemes=znet:;qrc:sLV --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=4 --shared-files
-sms      2346113    2678  4 07:34 tty2     00:01:18 /usr/lib64/firefox/firefox
-sms      2346197 2346113  0 07:34 tty2     00:00:00 /usr/lib64/firefox/firefox -contentproc -parentBuildID 20260622051112 -prefsHandle 0:34747 -prefMapHandle 1:273035 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {21b4a625-07e6-4e2a-8324-fa3ae9edccd4} -parentPid 2346113 -appDir /usr/lib64/firefox/browser 1 socket
-sms      2346243 2346113  0 07:34 tty2     00:00:01 /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:34937 -prefMapHandle 1:273035 -jsInitHandle 2:242716 -parentBuildID 20260622051112 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {5ab5a264-5b1f-4597-a53e-c18e6410218e} -parentPid 2346113 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 2 tab
-sms      2346249 2346113  0 07:34 tty2     00:00:00 /usr/lib64/firefox/firefox -contentproc -parentBuildID 20260622051112 -prefsHandle 0:34937 -prefMapHandle 1:273035 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {83f33767-68b1-43cd-bb18-bf14b1479500} -parentPid 2346113 -appDir /usr/lib64/firefox/browser 3 rdd
-sms      2346291 2346113  0 07:34 tty2     00:00:00 /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43552 -prefMapHandle 1:273035 -jsInitHandle 2:242716 -parentBuildID 20260622051112 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {0243fbef-8b52-444b-8744-7cd93f22b377} -parentPid 2346113 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 4 tab
-sms      2346352 2346113  0 07:34 tty2     00:00:00 /usr/lib64/firefox/firefox -contentproc -parentBuildID 20260622051112 -sandboxingKind 0 -prefsHandle 0:43479 -prefMapHandle 1:273035 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {633e2fee-f046-4e6d-b29e-3d57f70f3fed} -parentPid 2346113 -appDir /usr/lib64/firefox/browser 6 utility
-sms      2346355 2346113  0 07:34 tty2     00:00:13 /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:40296 -prefMapHandle 1:273035 -jsInitHandle 2:242716 -parentBuildID 20260622051112 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {04bd8777-83e4-48ad-9cca-0afcbdb7f24c} -parentPid 2346113 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 7 tab
-sms      2346499 2346113  2 07:35 tty2     00:00:45 /usr/lib64/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:40522 -prefMapHandle 1:273035 -jsInitHandle 2:242716 -parentBuildID 20260622051112 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {92b711ee-1e05-44fc-b74f-cb75ccf2972f} -parentPid 2346113 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser 11 tab
-sms      2346535 2346113  0 07:35 tty2     00:00:14 /us
+find /opt/znet/ -type f \( -name "*.html" -o -name "*.js" -o -name "*.css" \)
+
+
+
+cat /opt/znet/bin/znet.sh
+
+
+
+ss -tupn | grep QtWebEngineProcess
+
+
+
+
+
+/opt/znet/bin/znet.sh --remote-debugging-port=9222
+
+
+
+
+
+
+
+
+
